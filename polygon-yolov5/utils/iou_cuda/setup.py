@@ -7,9 +7,9 @@ setup(
     ext_modules=[CUDAExtension('polygon_inter_union_cuda',
         ['extensions.cpp', 'inter_union_cuda.cu'],
         extra_compile_args={
-            'cxx': ['-std=c++14', '-O2', '-Wall'],
+            'cxx': ['-std=c++17', '-O2', '-Wall'],
             'nvcc': [
-                '-std=c++14', '--expt-extended-lambda', '--use_fast_math', '-Xcompiler', '-Wall,-fno-gnu-unique',
+                '-std=c++17', '--expt-extended-lambda', '--use_fast_math', '-Xcompiler', '-Wall,-fno-gnu-unique',
                 '-gencode=arch=compute_37,code=sm_37',
                 '-gencode=arch=compute_60,code=sm_60', '-gencode=arch=compute_61,code=sm_61',
                 '-gencode=arch=compute_70,code=sm_70', '-gencode=arch=compute_72,code=sm_72',
