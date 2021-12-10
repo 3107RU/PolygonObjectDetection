@@ -1063,6 +1063,8 @@ def polygon_non_max_suppression(prediction, conf_thres=0.25, iou_thres=0.45, cla
             print(f'WARNING: NMS time limit {time_limit}s exceeded')
             break  # time limit exceeded
 
+    print(f'NMS time {time.time() - t}s')
+
     return output
 
 
